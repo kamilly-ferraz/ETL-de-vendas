@@ -3,13 +3,12 @@ import sqlite3
 import os
 from datetime import datetime
 
-# Função para gerar dados de exemplo (se CSV não existir)
 def generate_sample_data(file_path='sales_data.csv'):
     if not os.path.exists(file_path):
         data = {
             'order_id': [1, 2, 3, 4, 5],
             'product': ['Laptop', 'Mouse', 'Keyboard', 'Laptop', 'Monitor'],
-            'quantity': [1, 2, 1, None, 3],  # Inclui um valor nulo para limpeza
+            'quantity': [1, 2, 1, None, 3],  
             'price': [1200.50, 25.00, 45.99, 1200.50, 150.00],
             'order_date': ['2023-01-15', '2023-01-16', '2023-01-17', '2023-01-18', '2023-01-19']
         }
